@@ -27,7 +27,7 @@ async def lifespan(app: FastAPI):
     print('Models downloading...')
     try:
         app.state.model = SentenceTransformer('all-MiniLM-L6-v2')
-        app.state.client = chromadb.PersistentClient(path='../../data/chromadb')
+        app.state.client = chromadb.PersistentClient(path ='/app/data/chromadb')
         app.state.collection = app.state.client.get_collection('articles')
         app.state.llm = ChatGroq(model='llama-3.1-8b-instant', 
                                 api_key=os.getenv('GROQ_API_KEY'), 
@@ -87,6 +87,6 @@ def health(request: Request):
     return {
         'status' : 'OK', 
         'model' : 'all-MiniLM-L6-v2', 
-        'collection' : request.app.state.collecion.name,
+        'collection' : request.app.state.collection.name,
         'llm' : 'llama-3.1-8b-instant'
     }
