@@ -77,10 +77,21 @@ curl -X POST http://localhost:8000/query \
 
 ### Topic Map (UMAP 2D)
 
+<img width="873" height="596" alt="obraz" src="https://github.com/user-attachments/assets/aaf73872-7af5-44ee-87dc-5550cafc090e" />
+
 20 thematic clusters identified across 200k CS publications.
 LLMs & Foundation Models and AI & Knowledge Systems show the strongest
 growth trend (2018–2025).
 
 ### Topic Evolution (2018–2025)
 
+<img width="873" height="455" alt="obraz" src="https://github.com/user-attachments/assets/fb56ac50-dfba-47cd-a960-9b9a0e5da4f1" />
+
+
 ### Chat Interface
+
+<img width="1143" height="1098" alt="obraz" src="https://github.com/user-attachments/assets/bbb31a24-9bd3-4e91-93f9-76d2bd1f10b8" />
+
+<img width="1121" height="740" alt="obraz" src="https://github.com/user-attachments/assets/54f53fbd-7b13-4ea9-871f-3076f107a04f" />
+
+
