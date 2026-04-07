@@ -92,6 +92,8 @@ growth trend (2018–2025).
 
 <img width="1143" height="1098" alt="obraz" src="https://github.com/user-attachments/assets/bbb31a24-9bd3-4e91-93f9-76d2bd1f10b8" />
 
-<img width="1121" height="740" alt="obraz" src="https://github.com/user-attachments/assets/54f53fbd-7b13-4ea9-871f-3076f107a04f" />
+
+<img width="996" height="703" alt="obraz" src="https://github.com/user-attachments/assets/0ec716cf-b370-4c3e-bc43-d79987c1937f" />
+
 
 
