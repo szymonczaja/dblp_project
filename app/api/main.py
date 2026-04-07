@@ -23,6 +23,9 @@ PROMPT = ChatPromptTemplate.from_template("""
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
+    """Load ML models and connect to ChromaDB on startup;
+
+       release resources on shutdown."""
     load_dotenv()
     print('Models downloading...')
     try:
@@ -54,6 +57,14 @@ class QueryRequest(BaseModel):
 
 @app.post('/query')
 def query(body: QueryRequest, request: Request):
+    """
+    Perform a RAG query over the DBLP corpus.
+
+    Encodes the question, retrieves the top-n most similar papers from ChromaDB,
+    and generates a grounded answer using LLaMA 3.1 via Groq.
+
+    Returns the LLM answer, source metadata and matched paper titles.
+    """
     model = request.app.state.model
     collection = request.app.state.collection 
     llm = request.app.state.llm 
@@ -85,6 +96,7 @@ def query(body: QueryRequest, request: Request):
 
 @app.get('/health')
 def health(request: Request):
+    """Return service status and names of the loaded model, collection and LLM."""
     return {
         'status' : 'OK', 
         'model' : 'all-MiniLM-L6-v2', 

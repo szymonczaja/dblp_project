@@ -1,3 +1,10 @@
+"""
+Streamlit chat interface for the DBLP Research Assistant.
+
+Sends user questions to the FastAPI backend (POST /query),
+displays the LLM-generated answer and expands retrieved source papers.
+"""
+
 import streamlit as st
 import requests
 
